@@ -55,26 +55,7 @@ public class Player : MonoBehaviour
         {
             Instantiate(this.tiro1, new Vector2(Player.X + 0.5f, Player.Y - 0.2f), Quaternion.identity);
         }
-
-        else if (Input.GetKeyDown(KeyCode.LeftControl) && direcao == false)
-        {
-            Instantiate(this.tiro2, new Vector2(Player.X - 0.5f, Player.Y - 0.2f), Quaternion.identity);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D playerCol)
-    {
-        if (playerCol.gameObject.CompareTag("Tiro2"))
-        {
-            vida = vida - 1;
-
-            if (vida == 0)
-            {
-                Destroy(this.gameObject);
-            }
-        }
-
-    }
+    } 
     private void OnCollisionEnter2D(Collision2D Pulo)
     {
         if (Pulo.gameObject.CompareTag("Pe"))

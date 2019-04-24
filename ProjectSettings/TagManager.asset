@@ -13,6 +13,7 @@ TagManager:
   - ground
   - Pe
   - TopoBarril
+  - Alvo
   layers:
   - Default
   - TransparentFX
