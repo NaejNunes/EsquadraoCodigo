@@ -15,6 +15,9 @@ TagManager:
   - TopoBarril
   - Alvo
   - Fogo
+  - Down
+  - Up
+  - Parede
   layers:
   - Default
   - TransparentFX

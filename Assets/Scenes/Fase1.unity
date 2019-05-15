@@ -318,7 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Miss\xE3o: 10 Pontos"
+  m_Text: "Miss\xE3o: 8 Pontos"
 --- !u!222 &202620858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1213,6 +1213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53fca6f50321224785b5e57229f1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  milesimos: 60
+  segundos: 60
+  minutos: 0
   txtTempo: {fileID: 698494660}
   txtPontos: {fileID: 720596447}
 --- !u!1 &720596445
@@ -2647,6 +2650,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2401865540664296332, guid: f808bbbfe77c52c42b211279005ad436,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2401865540664296322, guid: f808bbbfe77c52c42b211279005ad436,
         type: 3}
       propertyPath: VelocidadePlayer
@@ -2656,11 +2664,6 @@ PrefabInstance:
         type: 3}
       propertyPath: forcaPulo
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2401865540664296332, guid: f808bbbfe77c52c42b211279005ad436,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f808bbbfe77c52c42b211279005ad436, type: 3}

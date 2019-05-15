@@ -6,15 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-     int milesimos, segundos, minutos;
+    public int milesimos, segundos, minutos;
     public Text txtTempo, txtPontos;
     public static int  pontos;
     // Start is called before the first frame update
     void Start()
-    {
-        milesimos = 60;
-        segundos = 40;
-        
+    {       
+        pontos = 0;
     }
 
     // Update is called once per frame
@@ -26,7 +24,7 @@ public class GameController : MonoBehaviour
 
         txtPontos.text = "Pontos: " + pontos;
 
-        if (pontos >= 3)
+        if (pontos >= 8)
         {
             SceneManager.LoadScene("Fase2");
         }

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2401865540664296320}
   - component: {fileID: 2401865540664296321}
-  - component: {fileID: 2401865540664296322}
   - component: {fileID: 2401865540664296323}
   - component: {fileID: 2401865540664296332}
+  - component: {fileID: 5126213927727984992}
   m_Layer: 0
   m_Name: PlayerFelipe
   m_TagString: Playerr1
@@ -82,22 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2401865540664296322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2401865540664296333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9c4a3c47bb9294b8067559de579c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 0
-  tiro1: {fileID: 8183285882442273138, guid: 4ac6aefab6e759748be2dd3d0930c1df, type: 3}
-  tiro2: {fileID: 8183285882442273138, guid: bbbc62f789e62db4d96e31a5b3079308, type: 3}
-  pulo: 0
 --- !u!60 &2401865540664296323
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -173,3 +157,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5126213927727984992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401865540664296333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9c4a3c47bb9294b8067559de579c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 0
+  VelocidadePlayer: 2
+  forcaPulo: 0.1
+  tiro1: {fileID: 8183285882442273138, guid: 4ac6aefab6e759748be2dd3d0930c1df, type: 3}
