@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\AlvoController.cs" />
     <Compile Include="Assets\Script\AlvoPF.cs" />
+    <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Tiro.cs" />
     <Compile Include="Assets\Script\Tiro2.cs" />

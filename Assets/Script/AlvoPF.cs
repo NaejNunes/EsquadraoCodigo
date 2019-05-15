@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AlvoPF : AlvoController
+public class AlvoPF : MonoBehaviour
 {
+    public GameObject alvo;
+    int numeros;
+    public static float X, Y;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +17,37 @@ public class AlvoPF : AlvoController
     // Update is called once per frame
     void Update()
     {
-        
+        X = transform.position.x;
+        Y = transform.position.y;
     }
-    private void OnTriggerEnter2D(Collider2D Bala)
+    public void SpownAlvo()
     {
-        if (Bala.gameObject.CompareTag("Tiro"))
+        numeros = Random.Range(0, 3);
+        Debug.Log(numeros);
+        switch (numeros)
         {
-            Destroy(gameObject);
-            SpownAlvo();
+            case 0:
+                Instantiate(this.alvo, new Vector2(AlvoPF.X + 0f, AlvoController.Y + 4f), Quaternion.identity);
+                break;
+
+            case 1:
+                Instantiate(this.alvo, new Vector2(AlvoPF.X + 0f, AlvoController.Y - 4f), Quaternion.identity);
+                break;
+
+            case 2:
+                Instantiate(this.alvo, new Vector2(AlvoPF.X + 0f, AlvoController.Y - 0f), Quaternion.identity);
+                break;
         }
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {      
+            if (collision.gameObject.CompareTag("Fogo"))
+            {
+                SpownAlvo();
+                GameController.pontos = GameController.pontos + 1;
+                Destroy(gameObject);
+                
+            }
+    }
+
 }

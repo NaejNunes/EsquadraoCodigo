@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AlvoController : MonoBehaviour
 {
-    public GameObject alvo1, alvo2, alvo3;
+    public GameObject alvo;
     int numeros;
+    public static float X, Y;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,25 +17,26 @@ public class AlvoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        X = transform.position.x;
+        Y = transform.position.y;
     }
     public void SpownAlvo()
     {
-       numeros =  Random.Range(1, 3);
-
+       numeros =  Random.Range(0, 3);
+        Debug.Log(numeros);
         switch (numeros)
         {
+            case 0:
+                Instantiate(this.alvo, new Vector2(AlvoController.X + 5.5f, AlvoController.Y + 4f), Quaternion.identity);
+                break;
+
             case 1:
-            Instantiate(alvo1);
-            break;
+                Instantiate(this.alvo, new Vector2(AlvoController.X + 5.5f, AlvoController.Y - 4f), Quaternion.identity);
+                break;
 
             case 2:
-            Instantiate(alvo2);
-            break;
-
-            case 3:
-            Instantiate(alvo3);
-            break;
+                Instantiate(this.alvo, new Vector2(AlvoController.X + 5.5f, AlvoController.Y - 0f), Quaternion.identity);
+                break;
         }
     }
 }
